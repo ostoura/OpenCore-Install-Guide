@@ -31,6 +31,20 @@ mkdir -p ~/macOS-installer && cd ~/macOS-installer && curl https://raw.githubuse
   
 :::
 
+::: If you have Mac Silicon With Ventura 13.0.1 
+
+you may see error "Could Not Fint Default Cataloug" Then You Need To Select The Catalouge manually And Add it to the command Using --catalogurl 
+
+For Example This Catalog Work For Me https://swscan.apple.com/content/catalogs/others/index-11-10.15-10.14-10.13-10.12-10.11-10.10-10.9-mountainlion-lion-snowleopard-leopard.merged-1.sucatalog 
+
+So The Command Like Would be Like That
+
+```sh
+mkdir -p ~/macOS-installer && cd ~/macOS-installer && curl https://raw.githubusercontent.com/munki/macadmin-scripts/main/installinstallmacos.py > installinstallmacos.py && sudo python3 installinstallmacos.py --catalogurl https://swscan.apple.com/content/catalogs/others/index-11-10.15-10.14-10.13-10.12-10.11-10.10-10.9-mountainlion-lion-snowleopard-leopard.merged-1.sucatalog
+```
+
+:::
+
 In order to run it, just copy and paste the below command in a terminal window:
 
 ```sh
